@@ -9,11 +9,18 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));	
 	    
-	    int sum = 0;
+	    long sum = 0;
 	    int T = Integer.parseInt(br.readLine());
 	    String str = br.readLine();
 	    
-	    for (int i = 0; i < T; i++) sum += (str.charAt(i) - 'a' + 1) * Math.pow(31, i);
+	    for (int i = 0; i < T; i++) {
+	        long temp =  str.charAt(i) - 'a' + 1;
+	        for (int j = i; j > 0; j--) {
+	            temp *= 31;
+	            temp %= 1234567891;
+	        }
+	        sum += temp;
+	    }
 	    bw.write(sum % 1234567891 + "\n");
 	    
 	    br.close();
