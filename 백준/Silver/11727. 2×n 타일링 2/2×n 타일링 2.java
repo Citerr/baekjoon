@@ -9,9 +9,7 @@ public class Main {
   public static void main(String[] args) throws IOException {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
     int N = Integer.parseInt(br.readLine());
-    cases[1] = 1; 
-    cases[2] = 3; 
-    cases[3] = 5;
+    cases[1] = 1; cases[2] = 3; cases[3] = 5;
 
     BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
     bw.write(tiling(N) + "");
