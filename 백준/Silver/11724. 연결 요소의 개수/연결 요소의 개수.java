@@ -50,7 +50,7 @@ public class Main {
   }
 
   static int DFS(int n) {
-    if (visited.contains(n) || edgeLists[n] == null ) return 0;
+    if ( visited.contains(n) ) return 0;
     visited.offer(n);
     //node.remove(Integer.valueOf(n));
 
